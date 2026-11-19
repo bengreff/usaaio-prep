@@ -723,14 +723,18 @@ select { max-width: 100%; }
   background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--radius); padding: 10px 14px; box-shadow: var(--shadow-lg); max-width: calc(100vw - 24px); flex-wrap: wrap; }
 .summary-sheet .lesson-body { font-size: 1rem; }
 
-@media (max-width: 760px) {
+/* The full nav needs about 1170 px (measured, public build). Below that, the Menu button, so no link is hidden. */
+@media (max-width: 1180px) {
   .nav-toggle { display: grid; flex: none; }
   .topbar { position: sticky; }
   .nav { display: none; position: absolute; top: var(--topbar-h); left: 0; right: 0; flex-direction: column; gap: 2px; padding: 8px 12px 12px;
     background: var(--surface); border-bottom: 1px solid var(--border); box-shadow: var(--shadow-lg); overflow: visible; }
   .nav a { padding: 10px 12px; font-size: 1rem; }
   body.nav-open .nav { display: flex; }
-  .topbar-right { margin-left: auto; gap: 6px; }
+  .topbar-right { margin-left: auto; }
+}
+@media (max-width: 760px) {
+  .topbar-right { gap: 6px; }
   .narrow-note { display: block; background: var(--accent-soft); border: 1px solid var(--accent-line); border-radius: var(--radius-sm); padding: 8px 12px; font-size: .9rem; margin: 0 0 12px; }
   .brand-tag { font-size: .58rem; padding: 0 5px; letter-spacing: .06em; }
 }

@@ -2,7 +2,7 @@
 // The app shell, the data bundles and the media are cached at install; the Pyodide files (a pinned, versioned CDN
 // URL) are cached the first time they are used. A new build ships a new VERSION: the new worker installs next to
 // the old one, the page offers a reload, and the old cache is deleted when the new worker takes over.
-const VERSION = 'ba81543e5d1c';
+const VERSION = '8ec7de019955';
 const CACHE = 'usaaio-prep-' + VERSION;
 const PY_CACHE = 'usaaio-prep-pyodide';
 const PYODIDE = 'https://cdn.jsdelivr.net/pyodide/v0.29.5/full/';
