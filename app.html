@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USAAIO Prep</title>
+<meta name="description" content="Free study site for USAAIO Round 1: lessons, practice questions, coding problems and mock exams. Runs in your browser. Not affiliated with USAAIO.">
+<meta name="color-scheme" content="light dark">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<script>window.STATIC_MODE = {"build": "2026-11-19 02:11", "owner": "bengreff", "repo": "usaaio-prep", "pages_url": "https://bengreff.github.io/usaaio-prep/", "colab_base": "https://colab.research.google.com/github/bengreff/usaaio-prep/blob/main/notebooks/", "pyodide": {"version": "0.29.5", "indexURL": "https://cdn.jsdelivr.net/pyodide/v0.29.5/full/", "packages": {"python": "3.13.2", "numpy": "2.2.5", "pandas": "2.3.3", "scikit-learn": "1.7.0", "scipy": "1.14.1", "matplotlib": "3.8.4"}}, "colab_versions": {"python": "3.13", "numpy": "2.4.6", "pandas": "2.2.3", "scikit-learn": "1.6.1", "torch": "2.14.1 (CPU)"}, "colab_modules": ["torch", "torchvision", "transformers"], "notebooks": ["u00-p01", "u01-p01", "u01-p02", "u01-p03", "u01-p04", "u01-p05", "u01-p06", "u02-p01", "u02-p02", "u02-p03", "u02-p04", "u02-p05", "u02-p06", "u02-p07", "u02-p08", "u02-p09", "u03-p01", "u03-p02", "u03-p03", "u03-p04", "u04-p01", "u04-p02", "u04-p03", "u04-p04", "u05-p01", "u05-p02", "u05-p03", "u06-p01", "u06-p02", "u06-p03", "u07-p01", "u07-p02", "u07-p03", "u07-p04", "u07-p05", "u07-p06", "u07-p07", "u07-p08", "u08-p01", "u08-p02", "u08-p03", "u08-p04", "u08-p05", "u09-p01", "u09-p02", "u09-p03", "u09-p04", "u09-p05", "u09-p06", "u09-p07", "u10-p01", "u10-p02", "u10-p03", "u10-p04", "u10-p05", "u10-p06", "u11-p01", "u11-p02", "u11-p03", "u11-p04", "u11-p05", "u12-p01", "u12-p02", "u12-p03", "u12-p04", "u12-p05", "u12-p06", "u13-p02", "u13-p03", "u13-p04", "u15-p01", "u15-p02", "u15-p03", "u15-p04", "u15-p05", "u15-p06", "u15-p07", "u16-p01", "u16-p02", "u16-p03", "u16-p04", "u16-p05", "u16-p06", "u17-p01", "u17-p02", "u17-p03", "u17-p04", "u17-p05", "u18-p01", "u18-p02", "u18-p03", "u18-p04", "u18-p05", "u18-p06", "u18-p07", "u19-p01", "u19-p02", "u19-p03", "u19-p04", "u19-p05", "u19-p06", "u20-p01", "u20-p02", "u20-p03", "u20-p04", "u20-p05", "u20-p06", "u20-p07", "u21-p01", "u21-p02", "u21-p03", "u21-p04", "u21-p05", "u22-p01"]};</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232b59c3'/%3E%3Cpath d='M9 22 L16 9 L23 22' stroke='white' stroke-width='3' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>
+  // Apply the saved theme before first paint (no flash).
+  try { var t = localStorage.getItem('usaaio-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+  // If a script fails to load (the local server dropped a connection), reload up to twice, then explain.
+  window.__bootFail = function () {
+    if (window.__bootFailed) return;
+    window.__bootFailed = true;
+    try {
+      var n = +(sessionStorage.getItem('usaaio-boot-retry') || 0);
+      if (n < 2) { sessionStorage.setItem('usaaio-boot-retry', String(n + 1)); setTimeout(function () { location.reload(); }, 400); return; }
+    } catch (e) {}
+    var show = function () {
+      document.getElementById('main').innerHTML = '<div class="page"><div class="panel error-panel" role="alert"><h2>The page did not load</h2>' +
+        '<p>Part of the site failed to load. Check your connection and reload the page.</p></div></div>';
+    };
+    if (document.getElementById('main')) show(); else document.addEventListener('DOMContentLoaded', show);
+  };
+</script>
+<link rel="stylesheet" href="static/vendor/katex.min.css">
+<link rel="stylesheet" href="static/vendor/cm/codemirror.min.css">
+<link rel="stylesheet" href="static/app.css">
+<link rel="canonical" href="https://bengreff.github.io/usaaio-prep/app.html">
+<meta property="og:title" content="USAAIO Prep">
+<meta property="og:description" content="Free, unofficial study course for the USA AI Olympiad (USAAIO) Round 1 and Round 2: lessons, practice questions, coding problems with graders and timed mocks. Runs in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bengreff.github.io/usaaio-prep/app.html">
+<meta property="og:image" content="https://bengreff.github.io/usaaio-prep/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="brand" href="#/today" aria-label="USAAIO Prep (unofficial), today">
+    <span class="brand-mark" aria-hidden="true"></span><span class="brand-name">USAAIO Prep</span><span class="brand-tag">unofficial</span>
+  </a>
+  <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5.5h14M3 10h14M3 14.5h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+  <nav class="nav" id="main-nav" aria-label="Main">
+    <a href="#/today" data-nav="today">Today</a>
+    <a href="#/learn" data-nav="learn">Learn</a>
+    <a href="#/practice" data-nav="practice">Practice</a>
+    <a href="#/cards" data-nav="cards">Cards</a>
+    <a href="#/code" data-nav="code">Code lab</a>
+    <a href="#/mock" data-nav="mock">Mock exam</a>
+    <a href="#/progress" data-nav="progress">Progress</a>
+    <a href="#/about" data-nav="about">About</a>
+  </nav>
+  <div class="topbar-right">
+    <span class="countdown" id="countdown" title="Days until Round 1, Fri Feb 19 2027"></span>
+    <a class="icon-btn" id="search-btn" href="#/search" aria-label="Search (press /)" title="Search (press /)"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.4 12.4 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></a>
+    <a class="icon-btn" id="settings-btn" href="#/settings" aria-label="Settings" title="Settings"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 2.2v2.2M10 15.6v2.2M2.2 10h2.2M15.6 10h2.2M4.5 4.5l1.6 1.6M13.9 13.9l1.6 1.6M4.5 15.5l1.6-1.6M13.9 6.1l1.6-1.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+    <button class="icon-btn" id="theme-btn" type="button" aria-label="Theme"></button>
+  </div>
+</header>
+<div id="session-bar" class="session-bar" hidden></div>
+<main id="main" tabindex="-1"></main>
+<footer class="page muted small" id="site-foot" style="padding-top:0">Made with Claude. Not affiliated with or endorsed by USAAIO. <a href="#/about">About</a> · <a href="#/data">Save or restore your progress</a></footer>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<div id="gloss-tip" class="gloss-tip" role="tooltip" hidden></div>
+<noscript><p style="padding:2rem">This study site needs JavaScript.</p></noscript>
+<script src="static/vendor/katex.min.js" onerror="__bootFail()"></script>
+<script src="static/vendor/marked.min.js" onerror="__bootFail()"></script>
+<script src="static/vendor/cm/codemirror.min.js" onerror="__bootFail()"></script>
+<script src="static/vendor/cm/python.min.js" onerror="__bootFail()"></script>
+<script src="static/vendor/cm/matchbrackets.min.js" onerror="__bootFail()"></script>
+<script src="static/vendor/cm/closebrackets.min.js" onerror="__bootFail()"></script>
+<script src="static/vendor/cm/comment.min.js" onerror="__bootFail()"></script>
+<script type="module" src="static/js/app.js" onerror="__bootFail()"></script>
+</body>
+</html>

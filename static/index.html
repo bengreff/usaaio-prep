@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USAAIO Study</title>
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232b59c3'/%3E%3Cpath d='M9 22 L16 9 L23 22' stroke='white' stroke-width='3' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+<script>
+  // Apply the saved theme before first paint (no flash).
+  try { var t = localStorage.getItem('usaaio-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+  // If a script fails to load (the local server dropped a connection), reload up to twice, then explain.
+  window.__bootFail = function () {
+    if (window.__bootFailed) return;
+    window.__bootFailed = true;
+    try {
+      var n = +(sessionStorage.getItem('usaaio-boot-retry') || 0);
+      if (n < 2) { sessionStorage.setItem('usaaio-boot-retry', String(n + 1)); setTimeout(function () { location.reload(); }, 400); return; }
+    } catch (e) {}
+    var show = function () {
+      document.getElementById('main').innerHTML = '<div class="page"><div class="panel error-panel" role="alert"><h2>The page did not load</h2>' +
+        '<p>Part of the site failed to load from the local study server. Reload the page. If that keeps failing, start the server again with ~/usaaio/site/start.</p></div></div>';
+    };
+    if (document.getElementById('main')) show(); else document.addEventListener('DOMContentLoaded', show);
+  };
+</script>
+<link rel="stylesheet" href="/static/vendor/katex.min.css">
+<link rel="stylesheet" href="/static/vendor/cm/codemirror.min.css">
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="brand" href="#/today" aria-label="USAAIO Study, today">
+    <span class="brand-mark" aria-hidden="true"></span><span class="brand-name">USAAIO</span><span class="brand-sub">study</span>
+  </a>
+  <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5.5h14M3 10h14M3 14.5h14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></button>
+  <nav class="nav" id="main-nav" aria-label="Main">
+    <a href="#/today" data-nav="today">Today</a>
+    <a href="#/learn" data-nav="learn">Learn</a>
+    <a href="#/practice" data-nav="practice">Practice</a>
+    <a href="#/cards" data-nav="cards">Cards</a>
+    <a href="#/code" data-nav="code">Code lab</a>
+    <a href="#/mock" data-nav="mock">Mock exam</a>
+    <a href="#/progress" data-nav="progress">Progress</a>
+  </nav>
+  <div class="topbar-right">
+    <span class="countdown" id="countdown" title="Days until Round 1, Fri Feb 19 2027"></span>
+    <a class="icon-btn" id="search-btn" href="#/search" aria-label="Search (press /)" title="Search (press /)"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12.4 12.4 17 17" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></a>
+    <a class="icon-btn" id="settings-btn" href="#/settings" aria-label="Settings" title="Settings"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 2.2v2.2M10 15.6v2.2M2.2 10h2.2M15.6 10h2.2M4.5 4.5l1.6 1.6M13.9 13.9l1.6 1.6M4.5 15.5l1.6-1.6M13.9 6.1l1.6-1.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a>
+    <button class="icon-btn" id="theme-btn" type="button" aria-label="Theme"></button>
+  </div>
+</header>
+<div id="session-bar" class="session-bar" hidden></div>
+<main id="main" tabindex="-1"></main>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<div id="gloss-tip" class="gloss-tip" role="tooltip" hidden></div>
+<noscript><p style="padding:2rem">This study site needs JavaScript.</p></noscript>
+<script src="/static/vendor/katex.min.js" onerror="__bootFail()"></script>
+<script src="/static/vendor/marked.min.js" onerror="__bootFail()"></script>
+<script src="/static/vendor/cm/codemirror.min.js" onerror="__bootFail()"></script>
+<script src="/static/vendor/cm/python.min.js" onerror="__bootFail()"></script>
+<script src="/static/vendor/cm/matchbrackets.min.js" onerror="__bootFail()"></script>
+<script src="/static/vendor/cm/closebrackets.min.js" onerror="__bootFail()"></script>
+<script src="/static/vendor/cm/comment.min.js" onerror="__bootFail()"></script>
+<script type="module" src="/static/js/app.js" onerror="__bootFail()"></script>
+</body>
+</html>

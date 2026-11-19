@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bengreff.github.io/usaaio-prep/sitemap.xml
